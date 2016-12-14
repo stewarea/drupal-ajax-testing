@@ -1,9 +1,12 @@
 <?php
 
 // function ajax_reader_init() {
-//   drupal_add_js('misc/jquery.form.js');
+//   drupal_add_library('system', 'drupal.ajax');
+//   drupal_add_library('system', 'jquery.form');
 //
 // }
+
+
   function ajax_link_menu() {
     $items = array();
 
@@ -39,7 +42,7 @@
 
   function ajax_link_callback($ajax) {
     $time = t('The current time is: !time', array('!time' => date('Y-m-d')));
-  
+
     if ($ajax  =='ajax'){
       $commands = array();
 
@@ -47,7 +50,7 @@
 
       $commands[] = ajax_command_changed('#ajax-display');
 
-      $commands[] = ajax_command_invike(NULL, "ajax_link");
+      $commands[] = ajax_command_invoke(NULL, "ajax_link");
 
       ajax_deliver(array('#type' => 'ajax', '#commands' => $commands));
     }
