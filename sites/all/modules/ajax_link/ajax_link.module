@@ -1,4 +1,9 @@
 <?php
+
+// function ajax_reader_init() {
+//   drupal_add_js('misc/jquery.form.js');
+//
+// }
   function ajax_link_menu() {
     $items = array();
 
@@ -9,11 +14,11 @@
       'access agruments' => array('access content'),
 
     );
-    $items['my-ajax-text/%'] = array(
+    $items['my-ajax-test/%'] = array(
       'title' => 'Ajax Test Callback',
       'type' => MENU_CALLBACK,
       'page callback' => 'ajax_link_callback',
-      'page aruments' => array(1),
+      'page arguments' => array(1),
       'access arguments' => array('access content'),
     );
     return $items;
@@ -34,7 +39,7 @@
 
   function ajax_link_callback($ajax) {
     $time = t('The current time is: !time', array('!time' => date('Y-m-d')));
-
+    var_dump($ajax);
     if ($ajax  =='ajax'){
       $commands = array();
 
