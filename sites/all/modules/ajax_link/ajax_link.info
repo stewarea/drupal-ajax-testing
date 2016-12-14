@@ -1,5 +1,6 @@
-name = ajax link
+name = time
 description = Tell Time
 package = Custom Modules
 core = 7.x
 scripts[] = ajax_link.js
+files[] = ajax_link.module

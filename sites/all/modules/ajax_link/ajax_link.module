@@ -25,7 +25,7 @@
       '#title' => t('Ajax Link'),
       '#href' => 'my-ajax-test/nojs',
       '#prefix' => '<div id="ajax-link">',
-      '#suffix' => '</div><div> id="ajax-display"></div>',
+      '#suffix' => '</div><div id="ajax-display"></div>',
       '#ajax' => array(
         'effect' => 'fade',
       )
