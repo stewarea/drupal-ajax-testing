@@ -39,7 +39,7 @@
 
   function ajax_link_callback($ajax) {
     $time = t('The current time is: !time', array('!time' => date('Y-m-d')));
-    var_dump($ajax);
+  
     if ($ajax  =='ajax'){
       $commands = array();
 
